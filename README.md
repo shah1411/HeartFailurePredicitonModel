@@ -1,6 +1,9 @@
 # Heart Failure Prediciton Model using machine learning
-This is a heart failure prediction model using machine learning 
 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/matplotlib) ![Twitter Follow](https://img.shields.io/twitter/follow/Abhishe42544768?label=Abhishek&style=social)
+
+
+This is a heart failure prediction model using machine learning   
 ![](Read_me_images/HF_readme.jpg)
 
 # Description 
