@@ -52,9 +52,9 @@ Once all the required libraries are installed, we will checking the data set for
 ```bash
 dataset.isnull().sum()
 ```
+- Training and Testing 
 
 The model works on four machine learning classifier: Logistic Regression, Support Vector Machine, Decission Tree and Random Forest. We are required to spilt the dataset for training and testing purpose, and in this project we use the ration 80:20 for trainning and testing respectively. 
-
 For accurate prediciton of heart failure, in this project we have used three main features: Ejection Fraction, Serum Creatinine and time which are highly responsible for heart failure.
 
 ```bash
@@ -64,7 +64,49 @@ y = dataset["DEATH_EVENT"]
 x_train,x_test,y_train,y_test = train_test_split(x,y, test_size=0.2, random_state=2)
 acc_list = []
 ```
+- Evaluation 
+
 The efficnecy of each classifier is measured through accuracy and the prediciton is showcased through confusion matirx for each model.
+
 ```bash
-ksfjdbk
+classifier = LogisticRegression()
+classifier.fit(x_train, y_train)
+
+# Predicting the Test set results
+y_pred = classifier.predict(x_test)
+
+from sklearn.metrics import confusion_matrix
+cm_test = confusion_matrix(y_pred, y_test)
+
+y_pred_train = classifier.predict(x_train)
+cm_train = confusion_matrix(y_pred_train, y_train)
+
+print()
+print('Accuracy for training set for Logistic Regression = {}'.format((cm_train[0][0] + cm_train[1][1])/len(y_train)))
+print('Accuracy for test set for Logistic Regression = {}'.format((cm_test[0][0] + cm_test[1][1])/len(y_test)))
 ```
+Accuracy of the model is calculated and after this, confusion matrix is prepared.
+
+```bash
+cm = confusion_matrix(y_test, y_pred)
+plt.figure()
+plot_confusion_matrix(cm, figsize=(12,8), hide_ticks=True, cmap=plt.cm.Blues)
+plt.title("Logistic Regression Model - Confusion Matrix")
+plt.xticks(range(2), ["Heart Not Failed","Heart Fail"])
+plt.yticks(range(2), ["Heart Not Failed","Heart Fail"])
+plt.show()
+```
+- Results
+
+The result of the model is a successfull confusion matrix, it consists of True and Predicted label.
+Matrix consists of four outputs: 
+1)	True Positive (TP): Patients who were correctly predicted for heart failure.
+2)	True Negative (TN): Patients who are correctly predicted for no heart failure.
+3)	False Positive (FP):  Patient who are incorrectly predicted for heart failure.
+4)	False Negative (TN): Patients who are incorrectly predicted for no heart failure. 
+
+The figure displays confusion matrix obtained from logistic regression model.
+
+
+![](Read_me_images/LR_CM.png)
+
