@@ -6,6 +6,15 @@
 This is a heart failure prediction model using machine learning   
 ![](Read_me_images/HF_readme.jpg)
 
+Table of content
+1. [Description](#description)
+2. [Dataset](#dataset)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Project Status](#project-status)
+6. [Road Map](#road-map)
+7. [Support](#support)
+
 # Description 
 Heart failure is one of the fatal diseases present globally and, 17 million people die annually due to it thus, it should be predicted at an earlier stage for better treatment. We ought to develop a heart failure prediction model using machine learning models such as logistic regression, support vector machine, decision tree and random forest. A clinical dataset has been used with 14 different parameters such as age, sex, ejection fraction, sodium creatinine, diabetes etc. Machine learning algorithms are deployed to predict heart failure in patients and accuracy of 90% is obtained and a confusion matrix is also generated for each classifier. The model will assist the doctors in diagnosis heart patients efficiently and heart failure can be predicted at an early stage such that it can be avoided by giving proper care.
 
@@ -112,4 +121,18 @@ The figure displays confusion matrix obtained from logistic regression model.
 
 
 ![](Read_me_images/LR_CM.png)
+
+# Project Status 
+- Currently the project is working on a prerecorded clincal dataset available online
+- no live streamimg data are fetched in the model
+- Further goal of the model is to work on live streamimg data incoming in from the hospitals for accurate results and predicition. 
+
+# Road Map
+The main goal of setting up of the predicion model is accomplished. The next step of the model is to work on live streamimg data and working on improving the prediciton model with better accuracy and precise results. 
+
+# Support
+you can contact me at [email](abhishekshah1411@gmail.com)
+
+
+
 
